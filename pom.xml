@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>BDD_CucumberFramework</groupId>
-  <artifactId>BDD_CUCU</artifactId>
+  <artifactId>BDDCucumberNew</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>BDD_CUCU</name>
+  <name>BDDCucumberNew</name>
   <url>http://maven.apache.org</url>
 
   <properties>
