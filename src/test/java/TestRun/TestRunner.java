@@ -9,11 +9,11 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
    //path of feature file
    features = {"src/main/java/featuresfiles/PrintGoogle.feature"},
-   strict=true,
+   //strict=true,
    // monochrome = true,
    //dryRun=true,
    //path of step definition file
-		   plugin = { "pretty", "html:target/cucumber-reports" ,"json:target/cucumber-reports/Cucumber.json"  },
+	 plugin = { "html:target/cucumber/report.html" ,"json:target/cucumber/Report.json" },
    glue = {"stepDefinition"}
    )
 
