@@ -13,7 +13,7 @@ import io.cucumber.junit.CucumberOptions;
    // monochrome = true,
    //dryRun=true,
    //path of step definition file
-	 plugin = { "html:target/cucumber/report.html" ,"json:target/cucumber/Report.json" },
+	 plugin = { "json:target/cucumber/Report.json" },
    glue = {"stepDefinition"}
    )
 
