@@ -7,11 +7,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import utilities.BaseClass;
 
-public class PrintGoogle {
-	public static WebDriver driver=null;
+
+public class PrintGoogle extends BaseClass {
+	
+	
 
 @Given("User launch chrome browser")
 public void user_launch_chrome_browser() {
@@ -21,7 +26,7 @@ public void user_launch_chrome_browser() {
     System.setProperty("webdriver.chrome.driver", "Drivers\\chromedriver.exe");  
     ChromeOptions options = new ChromeOptions();
     //options.addArguments("--headless");
-    options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
+    //options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
     
     // Instantiate a ChromeDriver class.     
     driver=new ChromeDriver(options);  
@@ -48,7 +53,7 @@ public void user_click_on_search_button() throws InterruptedException {
 	executor.executeScript("arguments[0].click();", driver.findElement(By.xpath("(//input[@name='btnK'])[1]")));
 	
 	Thread.sleep(2000);
-	driver.close();
+	
 
 }
 

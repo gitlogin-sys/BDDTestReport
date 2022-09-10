@@ -218,6 +218,7 @@
     <scope>test</scope>
 </dependency>
 
+
   
   	<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
 		<dependency>
@@ -310,7 +311,7 @@
         
        </configuration>
         
-        <executions>
+        <!-- <executions>
           <execution>
             <id>integration-test</id>
             <goals>
@@ -323,7 +324,7 @@
               <goal>verify</goal>
             </goals>
           </execution>
-        </executions>
+        </executions> -->
       </plugin> 
       
       
