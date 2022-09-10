@@ -21,9 +21,9 @@ public void user_launch_chrome_browser() {
     System.setProperty("webdriver.chrome.driver", "Drivers\\chromedriver.exe");  
     ChromeOptions options = new ChromeOptions();
     //options.addArguments("--headless");
-   // options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
+    options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
     
-         // Instantiate a ChromeDriver class.     
+    // Instantiate a ChromeDriver class.     
     driver=new ChromeDriver(options);  
     System.out.println("After Launching chrome..."); 
     driver.manage().window().maximize();
