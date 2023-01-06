@@ -32,8 +32,8 @@ public void user_launch_chrome_browser() {
     driver=new ChromeDriver(options);  
     System.out.println("After Launching chrome..."); 
     driver.manage().window().maximize();
-    driver.get("http://www.google.com");
-    
+    //driver.get("http://www.google.com");
+     driver.get(System.getenv("appUrl").toString());
     
 }
 
