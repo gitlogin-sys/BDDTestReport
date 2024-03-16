@@ -19,7 +19,7 @@ public class PrintGoogle extends BaseClass {
 	
 
 @Given("User launch chrome browser")
-public void user_launch_chrome_browser() {
+public void user_launch_chrome_browser() throws Exception {
     System.out.println("Launching chrome...");
     
  // System Property for Chrome Driver   
@@ -33,14 +33,14 @@ public void user_launch_chrome_browser() {
     System.out.println("After Launching chrome..."); 
     driver.manage().window().maximize();
     driver.get("http://www.google.com");
-    
+    Thread.sleep(500);
     
 }
 
 @When("User enter bdd in searcch box")
 public void user_enter_bdd_in_searcch_box() {
 	System.out.println("Searching in chrome...");
-	driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("selenium webdriver", Keys.TAB);
+	driver.findElement(By.xpath("//textarea[@class='gLFyf']")).sendKeys("selenium webdriver", Keys.TAB);
 	
 }
 
