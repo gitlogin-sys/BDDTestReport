@@ -33,8 +33,8 @@ public void user_launch_chrome_browser() throws Exception {
     System.out.println("After Launching chrome..."); 
     driver.manage().window().maximize();
    // driver.get("http://www.google.com");
-
-    driver.get(System.getenv("appUrl").toString());
+     driver.get(System.getenv("appUrl").toString());
+  
 
 	
     Thread.sleep(500);
