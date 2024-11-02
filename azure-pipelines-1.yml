@@ -36,7 +36,8 @@ stages:
               mavenAuthenticateFeed: false
               effectivePomSkip: false
               sqAnalysisEnabled: true
-    
+           - task: SonarQubePublish@7
+             displayName: Publish Quality Gate Result
 
 
                
