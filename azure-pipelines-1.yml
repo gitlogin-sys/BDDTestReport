@@ -29,13 +29,13 @@ stages:
              inputs:
               mavenPomFile: 'pom.xml'
               goals: 'clean install sonar:sonar'
+              codeCoverageTool: JaCoCo
               publishJUnitResults: false
               javaHomeOption: 'JDKVersion'
-              jdkVersionOption: '1.7'
               mavenVersionOption: 'Default'
               mavenAuthenticateFeed: false
               effectivePomSkip: false
-              sonarQubeRunAnalysis: true
+              sqAnalysisEnabled: true
     
 
 
