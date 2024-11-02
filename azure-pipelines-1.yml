@@ -21,7 +21,22 @@ stages:
                scannerMode: 'other'
                projectKey: 'TestSonarDemo'
                projectName: 'BDDCucumberNew'
-
+  - stage: Buildcode 
+    jobs:
+       - job: "buildjob"
+         steps:
+           - task: Maven@4
+             inputs:
+              mavenPomFile: 'pom.xml'
+              goals: 'clean install sonar:sonar'
+              publishJUnitResults: false
+              javaHomeOption: 'JDKVersion'
+              jdkVersionOption: '1.7'
+              mavenVersionOption: 'Default'
+              mavenAuthenticateFeed: false
+              effectivePomSkip: false
+              sonarQubeRunAnalysis: true
+    
 
 
                
