@@ -11,3 +11,17 @@ stages:
       - job: 'Checkoutgitcode'
         steps:
           - checkout: self
+  - stage: sonarscanning
+    jobs: 
+       - job: "sonarjob"
+         steps:
+           - task: SonarQubePrepare@7
+             inputs:
+               SonarQube: 'SonarqubeSCnew'
+               scannerMode: 'other'
+               projectKey: 'TestSonarDemo'
+               projectName: 'BDDCucumberNew'
+
+
+
+               
