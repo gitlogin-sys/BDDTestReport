@@ -11,7 +11,7 @@ stages:
       - job: 'Checkoutgitcode'
         steps:
           - checkout: self
-  - stage: sonarscanning
+  - stage: sonarqube_PrepareJob
     jobs: 
        - job: "sonarjob"
          steps:
@@ -29,7 +29,6 @@ stages:
              inputs:
               mavenPomFile: 'pom.xml'
               goals: 'clean install sonar:sonar'
-              codeCoverageTool: JaCoCo
               publishJUnitResults: false
               javaHomeOption: 'JDKVersion'
               mavenVersionOption: 'Default'
@@ -38,6 +37,8 @@ stages:
               sqAnalysisEnabled: true
            - task: SonarQubePublish@7
              displayName: Publish Quality Gate Result
-
+             inputs:
+              pollingTimeoutSec: '300'
+             
 
                
